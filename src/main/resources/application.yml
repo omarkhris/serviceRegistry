@@ -1,0 +1,19 @@
+server:
+  port: 8761
+
+  spring:
+    application:
+      name: ServiceRegister
+
+  eureka:
+    client:
+      register-with-eureka: true
+      fetch-registry: true
+      service-url:
+        defaultZone: http://localhost:8761/eureka/
+    server:
+      enableSelfPreservation: true
+      evictionIntervalTimeInMs: 5000
+      responseCacheAutoExpirationInSeconds: 30
+
+
